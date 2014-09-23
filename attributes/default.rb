@@ -4,7 +4,7 @@ default['ceph']['encrypted_data_bags'] = false
 default['ceph']['install_repo'] = true
 
 default['ceph']['init_style'] = value_for_platform(
-  ['ubuntu'] => 'upstart',
+  ['ubuntu'] => {:default => 'upstart'},
   'default' => 'sysvinit'
 )
 

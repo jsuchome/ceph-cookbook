@@ -27,8 +27,8 @@ default['ceph']['radosgw']['webserver_companion'] = 'apache2' # can be false
 default['ceph']['radosgw']['use_apache_fork'] = true
 
 default['ceph']['radosgw']['service_name'] = value_for_platform(
-  ['ubuntu'] => 'radosgw-all-starter',
-  ['debian'] => 'radosgw',
+  ['ubuntu'] => {:default => 'radosgw-all-starter'},
+  ['debian'] => {:default => 'radosgw'},
   'default' => 'ceph-radosgw'
 )
 

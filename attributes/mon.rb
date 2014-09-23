@@ -2,7 +2,7 @@ include_attribute 'ceph'
 
 default['ceph']['mon']['init_style'] = node['ceph']['init_style']
 default['ceph']['mon']['service_name'] = value_for_platform(
-  ['ubuntu'] => 'ceph-mon-all-starter',
+  ['ubuntu'] => {:default => 'ceph-mon-all-starter'},
   'default' => 'ceph'
 )
 

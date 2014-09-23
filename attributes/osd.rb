@@ -1,7 +1,7 @@
 include_attribute 'ceph'
 
 default['ceph']['osd']['service_name'] = value_for_platform(
-  ['ubuntu'] => 'ceph-osd-all-starter',
+  ['ubuntu'] => {:default => 'ceph-osd-all-starter'},
   'default' => 'ceph'
 )
 
